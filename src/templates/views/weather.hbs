@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+  <style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+/* NavBar */
+.Main_menu{
+    background-color: whitesmoke;
+}
+
+.main_header_left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.main_header_right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* Footer */
+footer{
+    margin: 0px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    line-height: 30px;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+        .TempInfo {
+            border: solid 1px rgb(208, 205, 205);
+            width: 45%;
+            margin: 100px auto;
+            padding: 10px;
+            display: block;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border-radius: 5px;
+            background-color: rgb(233, 97, 97);
+            color: white;
+        }
+
+        .TopHead {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .Main {
+            text-align: center;
+        }
+
+        #Temp {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .middle_layer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: 576px) {
+            /* Apply responsive styles for small screens */
+            .TempInfo {
+                padding: 10px;
+                width: 100%;
+            }
+
+            #Temp {
+                font-size: 2rem;
+            }
+        }
+
+
+
+#Search{
+    margin-top: 50px;
+    width: 50%;
+    border: solid rgb(237, 68, 68);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 10px 7px;
+}
+#SubmitButton{
+    padding: 12px 25px;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: white;
+}
+
+
+
+
+  </style>
+<body>
+
+{{!-- NavBar --}}
+{{>Nav}}
+
+
+{{!-- Section-1 --}}
+<div class="container-fluid main_header  text-center">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+
+
+            <div class="Main-Cotent">
+                <form class="TempForm">
+                    <input class=" mr-sm-2" type="text" id="Search" placeholder="Enter Your City" >
+                    <input class="bg-danger"  type="submit" value="Search" id="SubmitButton">
+                </form>
+            </div>
+
+
+{{!-- TempInformation --}}
+    <div class="container">
+        <div class="TempInfo">
+            <div class="TopHead">
+                <h5 id="Day">Day</h5>
+                <h5 id="Date">Date</h5>
+            </div>
+            <div class="Main">
+                <h1 id="CityCountry">City</h1>
+                <div class="middle_layer data_hide">
+                    <h1 id="Temp">0 <sup>°</sup> C</h1>
+                    <p id="Cloud"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Footer --}}
+{{>Footer}}
+
+
+
+</body>
+{{!-- My custom js --}}
+
+<script src="js/index.js"></script>
+
+{{!-- ---------------------------- --}}
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</html>

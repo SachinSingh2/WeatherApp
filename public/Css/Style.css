@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+/* NavBar */
+.Main_menu{
+    background-color: whitesmoke;
+}
+
+.main_header_left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.main_header_right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* Footer */
+footer{
+    margin: 0px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    line-height: 30px;
+    padding-top: 10px;
+}
